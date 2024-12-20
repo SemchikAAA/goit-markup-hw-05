@@ -726,7 +726,7 @@ footer .logo {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-wrraper-cont.form-wrraper-comm {
+.form-wrraper-comm {
   margin-bottom: 16px;
 }
 
