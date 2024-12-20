@@ -525,15 +525,17 @@ footer .logo {
 }
 
 .subscribe-form {
-  /* display: flex; */
+  display: flex;
+  gap: 24px;
 }
 
-.subscribe-label {
+.subscribe-text {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #fff;
+  margin-bottom: 16px;
 }
 
 .footer-email-input {
@@ -541,8 +543,12 @@ footer .logo {
   border-radius: 4px;
   width: 264px;
   height: 40px;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  padding-left: 16px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   background-color: transparent;
-  margin-right: 24px;
   padding: 8px 16px;
 }
 
@@ -556,33 +562,33 @@ footer .logo {
 }
 
 .footer-subscribe-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
   border: none;
   border-radius: 4px;
-  padding: 8px 24px;
   min-width: 165px;
   height: 40px;
-  background: #4d5ae5;
+  background-color: #4d5ae5;
+  font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: #fff;
-  padding: 8px 24px;
-  text-align: start;
 }
 
 .btn-icon-send {
-  position: absolute;
+  /* position: absolute;
   top: 50%;
   right: 24px;
-  transform: translateY(-50%);
+  transform: translateY(-50%); */
+  margin-left: 16px;
   fill: #fff;
 }
 
 .footer-email-input::placeholder {
-  font-size: 12px;
-  line-height: 2;
-  letter-spacing: 0.04em;
   color: #fff;
 }
 /* #endregion Footer */
@@ -618,9 +624,10 @@ footer .logo {
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   background: #fcfcfc;
   width: 408px;
-  height: 584px;
+  min-height: 584px;
   border-radius: 4px;
-  padding: 24px;
+  padding: 72px 24px 24px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-text {
@@ -630,28 +637,36 @@ footer .logo {
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
-  margin-top: 48px;
   margin-bottom: 16px;
 }
 
 .modal-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  cursor: pointer;
   position: absolute;
+  width: 24px;
+  height: 24px;
   top: 24px;
   right: 24px;
   background-color: #e7e9fc;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 100%;
-  fill: #2e2f42;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-close {
 }
 
 .modal-close:hover,
 .modal-close:focus {
-  fill: #fff;
   background-color: #404bbf;
-  border-color: #404bbf;
+  border: none;
+  fill: #fff;
 }
 
 .form-wrraper-cont {
@@ -662,7 +677,7 @@ footer .logo {
   display: block;
   margin-bottom: 4px;
   font-size: 12px;
-  line-height: 1.16;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
 }
@@ -673,12 +688,13 @@ footer .logo {
   border-radius: 4px;
   height: 40px;
   padding-left: 38px;
-  outline: none;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: transparent;
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-user-input:focus {
-  border: 1px solid #4d5ae5;
+  border-color: #4d5ae5;
 }
 
 .form-user-icon {
@@ -699,13 +715,19 @@ footer .logo {
 }
 
 .form-user-coment {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
   resize: none;
-  outline: none;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
+  background-color: transparent;
+  outline: transparent;
   width: 100%;
   min-height: 120px;
   padding: 8px 16px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-user-coment::placeholder {
@@ -720,6 +742,7 @@ footer .logo {
 }
 
 .form-wrapper-checkbox {
+  margin-top: 16px;
   margin-bottom: 24px;
 }
 
@@ -734,6 +757,9 @@ footer .logo {
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   margin-right: 8px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .checkbox:checked + .form-user-checkbox .castom-checkbox {
@@ -744,7 +770,7 @@ footer .logo {
 
 .form-user-checkbox {
   font-size: 12px;
-  line-height: 1.16;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
 }
@@ -760,6 +786,7 @@ footer .logo {
 }
 
 .form-btn-submit {
+  cursor: pointer;
   display: block;
   margin: 0 auto;
   border-radius: 4px;
