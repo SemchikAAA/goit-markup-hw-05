@@ -542,6 +542,7 @@ footer .logo {
   border: 1px solid #fff;
   border-radius: 4px;
   width: 264px;
+  color: #fff;
   height: 40px;
   font-size: 12px;
   line-height: 2;
@@ -550,6 +551,9 @@ footer .logo {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   background-color: transparent;
   padding: 8px 16px;
+}
+.footer-email-input::placeholder {
+  color: #fff;
 }
 
 .footer-input-btn {
@@ -580,16 +584,8 @@ footer .logo {
 }
 
 .btn-icon-send {
-  /* position: absolute;
-  top: 50%;
-  right: 24px;
-  transform: translateY(-50%); */
   margin-left: 16px;
   fill: #fff;
-}
-
-.footer-email-input::placeholder {
-  color: #fff;
 }
 /* #endregion Footer */
 
@@ -655,11 +651,11 @@ footer .logo {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-close {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close:hover,
@@ -730,9 +726,13 @@ footer .logo {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.form-wrraper-cont.form-wrraper-comm {
+  margin-bottom: 16px;
+}
+
 .form-user-coment::placeholder {
   font-size: 12px;
-  line-height: 1.16667;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: rgba(46, 47, 66, 0.4);
 }
@@ -742,7 +742,6 @@ footer .logo {
 }
 
 .form-wrapper-checkbox {
-  margin-top: 16px;
   margin-bottom: 24px;
 }
 
